@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Untuk Istri Tercinta</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      padding: 20px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      color: #e75480;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+
+    .signature {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.7rem;
+      color: #e75480;
+      margin-top: 25px;
+    }
+
+    .photo-frame {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid #e75480;
+  margin: 0 auto 20px; /* ini untuk center horizontal */
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+    button {
+      background: #e75480;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(231, 84, 128, 0.4);
+    }
+
+    button:hover {
+      background: #d43d6f;
+      transform: translateY(-2px);
+    }
+
+    .hidden-message {
+      display: none;
+      margin-top: 25px;
+      padding: 18px;
+      background: rgba(231, 84, 128, 0.1);
+      border-radius: 10px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .hearts, .petals-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .heart, .petal {
+      position: absolute;
+      font-size: 20px;
+      opacity: 0;
+      color: #e75480;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .petal {
+      color: #ff69b4;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+    }
+
+    @media screen and (max-width: 768px) {
+      .card {
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 1.7rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+      }
+
+      .photo-frame {
+        width: 100px;
+        height: 100px;
+      }
+
+      .signature {
+        font-size: 1.3rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+
+      button {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+      }
+
+      .photo-frame {
+        width: 90px;
+        height: 90px;
+      }
+
+      .signature {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="photo-frame">
+      <img src="file:///D:/bini/1.jpg" alt="Foto Istri Tercinta">
+    </div>
+    <h1>Selamat Ulang Tahun Sayangku!</h1>
+    <p>Di hari spesialmu ini, aku ingin mengucapkan...</p>
+    <p>Terima kasih telah menjadi cahaya dalam hidupku, teman terbaikku, dan cinta sejatiku.</p>
+    <p>Kecantikanmu tidak hanya terpancar dari luar, tetapi juga dari hatimu yang penuh kasih.</p>
+    <p>Aku berjanji akan selalu mencintaimu, menghargaimu, dan membuatmu tersenyum.</p>
+    <button onclick="showMessage()">Klik untuk Pesan Spesial</button>
+    <div id="specialMessage" class="hidden-message">
+      <p>Untuk wanita terhebat dalam hidupku,</p>
+      <p>Semoga tahun ini membawa kebahagiaan dan semua impianmu terwujud.</p>
+      <p>Selamat ulang tahun sayang! Aku mencintaimu sampai akhir waktu.</p>
+      <div class="signature">Suamimu yang selalu mencintaimu</div>
+    </div>
+    <div class="hearts" id="hearts"></div>
+    <div class="petals-container" id="petals"></div>
+  </div>
+
+  <audio id="bgm" autoplay loop muted>
+    <source src="file:///D:/bini/musik.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script>
+    function createHearts() {
+      const container = document.getElementById('hearts');
+      for (let i = 0; i < 15; i++) {
+        const heart = document.createElement('div');
+        heart.innerHTML = '❤';
+        heart.classList.add('heart');
+        heart.style.left = Math.random() * 100 + '%';
+        heart.style.animationDelay = Math.random() * 5 + 's';
+        container.appendChild(heart);
+      }
+    }
+
+    function createPetals() {
+      const container = document.getElementById('petals');
+      for (let i = 0; i < 20; i++) {
+        const petal = document.createElement('div');
+        petal.innerHTML = '🌹';
+        petal.classList.add('petal');
+        petal.style.left = Math.random() * 100 + '%';
+        petal.style.animationDelay = Math.random() * 7 + 's';
+        petal.style.fontSize = `${16 + Math.random() * 10}px`;
+        container.appendChild(petal);
+      }
+    }
+
+    function showMessage() {
+      document.getElementById('specialMessage').style.display = 'block';
+      createHearts();
+      createPetals();
+    }
+
+    document.addEventListener('click', () => {
+      const audio = document.getElementById('bgm');
+      audio.muted = false;
+      audio.play().catch(() => {});
+    }, { once: true });
+
+    window.onload = () => {
+      createHearts();
+      createPetals();
+    };
+  </script>
+</body>
+</html>
